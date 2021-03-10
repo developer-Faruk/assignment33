@@ -1,0 +1,132 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.header-part .logo img{
+    max-width:22%;
+}
+.width{
+    width: 1440px;
+    margin: auto;
+    /*! display: flex; */
+}
+/* defult */
+.header-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #d1d0cc;
+    height: 40px;
+}
+
+.header-part .menu-bar ul{
+    display: flex;
+    list-style: none;
+
+    text-align: right;
+    margin-left: auto;
+}
+
+
+.header {
+    background-color: #d1d0cc;
+    padding: 20px 0;
+  }
+  .menu-bar ul li a {
+    display: inline-block;
+    color: #111;
+    text-decoration: none;
+    padding: 11px 20px;
+    font-size: 21px;
+    position: relative;
+    
+  }
+
+  .menu-bar ul li a::before {
+	content: "";
+	width: 0%;
+	height:3px;
+	background-color: #3961ec;
+	position: absolute;
+	bottom: -14px;
+	left: 28px;
+    transition: all .4s ease-in-out;
+}
+.menu-bar ul li a:hover::before{
+    width: 50%;
+}
+
+  .menu-bar ul li:last-child a{
+      background-color: #fff;
+      border-radius: 50px;
+      padding: 11px 39px;
+      color: #28afea;
+      transition: all .4s ease-in-out;
+  }
+  .menu-bar ul li:last-child a:hover{
+      transform: translateY(-5px);
+  }
+  .menu-bar ul li:last-child a:hover::before{
+      width: 0;
+  }
+
+  /* baner */
+  .slider .button {
+	text-decoration: none;
+	background-color: #3961ec;
+	color: #fff;
+	padding: 12px 27px;
+	display: inline-block;
+	border-radius: 50px;
+	font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+.slider .button::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #111;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    display: inline-block;
+    z-index: -1;
+}
+
+.slider p {
+	max-width: 467px;
+	color: #85837b;
+	margin: 33px 0;
+	line-height: 26px;
+	font-size: 20px;
+}
+.slider .button:hover::after{
+    width: 100%;
+}
+.slider h1 {
+	font-size: 41px;
+}
+.baner {
+    padding: 100px 0;
+    position: relative;
+}
+
+.baner::after {
+	content: "";
+	background: url(./hero-image.jpg) no-repeat center center;
+	background-size: contain;
+	width: 1106px;
+	height: 913px;
+	position: absolute;
+	right: -10%;
+	top: -26%;
+	border-radius: 50%;
+	z-index: -1;
+}
